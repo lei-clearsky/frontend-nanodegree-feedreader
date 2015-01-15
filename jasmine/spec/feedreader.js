@@ -122,6 +122,10 @@ $(function() {
       expect(initialContent).not.toBe(newContent);
       done();
     });
+    // load the first feed source after above test is completed
+    afterEach(function (done) {
+      loadFeed(0, done);
+    });
 
   });
 
