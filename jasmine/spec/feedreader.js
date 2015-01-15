@@ -109,7 +109,7 @@ $(function() {
     /* This is a test that ensures when a new feed is loaded
      * by the loadFeed function that the content actually changes.
      */
-    var initialContent;
+    var initialContent, newContent;
     // before test functions run, retrieve the content in each feed entry
     // afterwards, run loadFeed function with the second feed source
     beforeEach(function (done) {
@@ -118,7 +118,7 @@ $(function() {
     });
     // ensure the content has been changed compared to the initial content
     it('content should change', function (done) {
-      var newContent = $('.feed').find('.entry');
+      newContent = $('.feed').find('.entry');
       expect(initialContent).not.toBe(newContent);
       done();
     });
